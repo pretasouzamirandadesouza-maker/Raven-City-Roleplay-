@@ -8,7 +8,7 @@
 
 #include "common.h"
 #include "RW/RenderWare.h"
-#include "rgba.h"
+#include "RGBA.h"
 
 class CShadowCamera { // AKA CShadowImage
 public:
