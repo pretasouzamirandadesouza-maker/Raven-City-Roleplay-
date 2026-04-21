@@ -7,7 +7,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.samp.mobile.R;
-import com.samp.mobile.game.GTASA;
+import com.samp.mobile.game.SAMP;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnConnect = findViewById(R.id.btnConnect);
 
         btnConnect.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, GTASA.class);
+            Intent intent = new Intent(MainActivity.this, SAMP.class);
             intent.putExtra("server_ip", "15.204.150.91");
             intent.putExtra("server_port", 17930);
             startActivity(intent);
