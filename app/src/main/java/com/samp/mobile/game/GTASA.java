@@ -17,6 +17,9 @@ public class GTASA extends WarMedia {
     static String vmVersion;
     private boolean once = false;
 
+    public static String SERVER_IP = "15.204.150.91";
+    public static int SERVER_PORT = 17930;
+
     static {
         ShadowHook.init(new ShadowHook.ConfigBuilder()
                 .setMode(ShadowHook.Mode.UNIQUE)
@@ -87,6 +90,18 @@ public class GTASA extends WarMedia {
         }
 
         System.out.println("GTASA onCreate");
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            String ip = intent.getStringExtra("server_ip");
+            int port = intent.getIntExtra("server_port", 17930);
+
+            if (ip != null && !ip.isEmpty()) {
+                SERVER_IP = ip;
+            }
+            SERVER_PORT = port;
+        }
+
         //  gtasaSelf = this;
         //  wantsAccelerometer = true;
 
