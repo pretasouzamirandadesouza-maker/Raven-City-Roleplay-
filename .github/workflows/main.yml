@@ -19,6 +19,10 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Corrigir includes RGBA automaticamente
+        run: |
+          find app/src/main/cpp -type f \( -name "*.h" -o -name "*.cpp" \) -exec sed -i 's#../rgba.h#../RGBA.h#g' {} +
+
       - name: Dar permissão pro gradle
         run: chmod +x gradlew
 
