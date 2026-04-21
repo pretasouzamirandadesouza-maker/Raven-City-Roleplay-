@@ -27,7 +27,7 @@
 
 #include "samp_widgets/dialogs/dialog.h"
 
-#include "..//vendor/raknet/SingleProducerConsumer.h"
+#include "..//vendor/RakNet/SingleProducerConsumer.h"
 
 #pragma pack(push, 1)
 struct BUFFERED_COMMAND_TEXTDRAW
