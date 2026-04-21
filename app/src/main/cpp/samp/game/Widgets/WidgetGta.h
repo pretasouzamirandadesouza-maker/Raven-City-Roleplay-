@@ -3,11 +3,10 @@
 //
 
 #pragma once
-
 #include <cstdint>
 #include "game/sprite2d.h"
 #include "game/Core/Rect.h"
-#include "game/rgba.h"
+#include "game/RGBA.h"
 #include "game/Enums/HIDMapping.h"
 #include "../common.h"
 
